@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 2 Homework</title>
+
+
+
+  <link rel="stylesheet" href="src/styles.css">
+
+  <script src="https://kit.fontawesome.com/3d3dd19383.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <form id="search-form">
+      <div class="row search">
+
+        <div class="col-4">
+          <form class="enterCity">
+            <input type="Enter city" placeholder="Enter City" autocomplete="off" autofocus="on"
+              id="search-text-input" />
+
+          </form>
+          <button type="button" class="btn btn-info">Search</button>
+        </div>
+      </div>
+
+      <header> Search</header>
+
+      <div class="row">
+        <div class="col-12">
+          <h1 id="today">
+            Monday 11/9/2020
+          </h1>
+        </div>
+      </div>
+
+      </br>
+
+      <h2>
+        <div class="row">
+          <div class="col-6" id="citySearch">
+            Chicago
+            </br>
+            <i class="fas fa-cloud-sun"></i>
+            </br>
+            <p class="currentTemp">65° F</p>
+          </div>
+
+
+          <div class="col-6">
+            <ul class="Conditions">
+              <li>Humidity: 30%</li>
+              <li>Wind: 5 mph SE</li>
+            </ul>
+          </div>
+
+        </div>
+      </h2>
+
+      <div class="row">
+        <div class="col-10">
+          <h3>Five Day Forecast</h3>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-2">
+          <p class="day1">
+            Tues
+            </br>
+            11/10
+            </br>
+            <i class="fas fa-bolt"></i>
+            </br>
+            74° F
+            </br>
+          </p>
+        </div>
+
+        <div class="col-2">
+          <p class="day2">
+            Wed
+            </br>
+            11/11
+            </br>
+            <i class="fas fa-cloud-sun"></i>
+            </br>
+            48° F
+          </p>
+        </div>
+
+        <div class="col-2">
+          <p class="day3">
+            Thurs
+            </br>
+            11/12
+            </br>
+            <i class="fas fa-cloud-sun"></i>
+            </br>
+            55° F
+          </p>
+        </div>
+
+        <div class="col-2">
+          <p class="day4">
+            Fri
+            </br>
+            11/13
+            </br>
+            <i class="fas fa-cloud-sun"></i>
+            </br>
+            47° F
+          </p>
+        </div>
+
+        <div class="col-3">
+          <p class="day5">
+            Sat
+            </br>
+            11/14
+            </br>
+            <i class="fas fa-cloud-showers-heavy"></i>
+            </br>
+            47 ° F
+          </p>
+        </div>
+
+      </div>
+
+  </div>
+
+  <script type="text/javascript" src="src/index.js"></script>
+</body>
+
+</html>
