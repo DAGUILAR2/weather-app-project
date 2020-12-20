@@ -16,8 +16,6 @@ today.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
-  let header = document.querySelector("header");
-  header.innerHTML = `Searching for ${searchInput.value}...`;
   searchCity(searchInput.value);
 }
 
@@ -45,7 +43,7 @@ function showTemperature(response) {
   let citySearch = document.querySelector("#citySearch");
   citySearch.innerHTML = `${currentCity}`;
   let actualTemp = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector("#currentTemp");
+  let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = `${actualTemp}° C`;
 
   console.log(actualTemp);
