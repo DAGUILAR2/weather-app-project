@@ -45,7 +45,7 @@ function showTemperature(response) {
   let citySearch = document.querySelector("#citySearch");
   citySearch.innerHTML = `${currentCity}`;
   let actualTemp = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector(".currentTemp");
+  let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = `${actualTemp}° C`;
 
   console.log(actualTemp);
