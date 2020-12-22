@@ -1,6 +1,5 @@
 body {
   background-image: linear-gradient(100deg, #93a5cf 0%, #e4efe9 100%);
-  font-family: "comfortaa", "cursive";
 }
 
 header {
@@ -15,14 +14,21 @@ header {
 form {
   font-family: "comfortaa", "cursive";
   color: black;
+  font-size: 10px;
   top: 20px;
   bottom: 0;
   left: 0;
   right: 50px;
 }
 
+button {
+  font-size: 10px;
+  text-align: right;
+}
+
 input {
   font-family: "comfortaa", "cursive";
+  font-size: 10px;
   border-radius: 15px;
   padding: 8px;
   text-align: center;
@@ -44,15 +50,12 @@ h1 {
 }
 
 h2 {
+  border-style: none;
   color: #2d6187;
   font-family: "comfortaa", "cursive";
-  font-size: 36px;
+  font-size: 24px;
   text-align: left;
   position: relative;
-  top: 20px;
-  bottom: 0;
-  left: 50px;
-  right: 0;
 }
 
 h3 {
@@ -77,10 +80,16 @@ p {
 
 footer {
   font-family: "comfortaa", "cursive";
+  font-size: 10px;
   padding: 20px;
   text-align: center;
 }
 
+.conditions {
+  list-style: none;
+  font-size: 20px;
+  text-align: left;
+}
 .search {
   margin-top: 40px;
 }
