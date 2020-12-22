@@ -85,6 +85,18 @@ footer {
   text-align: center;
 }
 
+#btn-info {
+  font-size: 10px;
+}
+
+#citySearch {
+  font-size: 10px;
+}
+
+.currentTemp {
+  font-size: 15px;
+}
+
 .conditions {
   list-style: none;
   font-size: 20px;
