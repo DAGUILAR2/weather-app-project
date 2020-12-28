@@ -11,19 +11,15 @@ header {
   right: 0;
 }
 
-form {
-  font-family: "comfortaa", "cursive";
+form,
+button {
+  bottom: 0;
   color: black;
+  font-family: "comfortaa", "cursive";
   font-size: 10px;
   top: 20px;
-  bottom: 0;
   left: 0;
   right: 50px;
-}
-
-button {
-  font-size: 10px;
-  text-align: right;
 }
 
 input {
@@ -52,6 +48,8 @@ h1 {
 h2 {
   border-style: none;
   color: #2d6187;
+  grid-column-start: span 3;
+  grid-row-start: span 1;
   font-family: "comfortaa", "cursive";
   font-size: 24px;
   text-align: left;
@@ -85,12 +83,12 @@ footer {
   text-align: center;
 }
 
-#btn-info {
+#citySearch {
   font-size: 10px;
 }
 
-#citySearch {
-  font-size: 10px;
+.container {
+  display: grid;
 }
 
 .currentTemp {
