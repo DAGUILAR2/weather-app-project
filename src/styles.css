@@ -11,15 +11,19 @@ header {
   right: 0;
 }
 
-form,
-button {
+form {
   bottom: 0;
   color: black;
   font-family: "comfortaa", "cursive";
-  font-size: 10px;
+  font-size: 15px;
   top: 20px;
   left: 0;
   right: 50px;
+}
+
+button {
+  font-family: "comfortaa", "cursive";
+  font-size: 10px;
 }
 
 input {
@@ -48,8 +52,6 @@ h1 {
 h2 {
   border-style: none;
   color: #2d6187;
-  grid-column-start: span 3;
-  grid-row-start: span 1;
   font-family: "comfortaa", "cursive";
   font-size: 24px;
   text-align: left;
@@ -102,6 +104,10 @@ footer {
 }
 .search {
   margin-top: 40px;
+}
+
+.search-form {
+  grid-area: auto;
 }
 
 .fa-bolt {
