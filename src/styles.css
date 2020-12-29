@@ -86,7 +86,8 @@ footer {
 }
 
 #citySearch {
-  font-size: 10px;
+  font-size: 22px;
+  text-align: center;
 }
 
 .container {
@@ -94,7 +95,8 @@ footer {
 }
 
 .currentTemp {
-  font-size: 15px;
+  font-size: 22px;
+  text-align: left;
 }
 
 .conditions {
