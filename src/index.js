@@ -50,6 +50,14 @@ function showTemperature(response) {
   console.log(currentCity);
 }
 
+function showFahrenheit(event){
+  event.preventDefault();
+  let showFahrenheitTemp = (12 * 9) / 5 + 32;
+  let currentTemp = document.querySelector(".currentTemp");
+  currentTemp.innerHTML = showFahrenheitTemp;
+}
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
 
 navigator.geolocation.getCurrentPosition(searchPosition);
