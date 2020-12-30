@@ -50,4 +50,6 @@ function showTemperature(response) {
   console.log(currentCity);
 }
 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+
 navigator.geolocation.getCurrentPosition(searchPosition);

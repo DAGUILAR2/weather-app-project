@@ -96,7 +96,7 @@ footer {
 
 .currentTemp {
   font-size: 22px;
-  text-align: left;
+  position: left;
 }
 
 .conditions {
