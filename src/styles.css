@@ -54,7 +54,7 @@ h2 {
   color: #2d6187;
   font-family: "comfortaa", "cursive";
   font-size: 24px;
-  text-align: left;
+  text-align: center;
   position: relative;
 }
 
@@ -95,14 +95,16 @@ footer {
 }
 
 #currentTemp {
+  display: block;
   font-size: 22px;
-  position: left;
+  position: relative;
 }
 
 .conditions {
   list-style: none;
   font-size: 20px;
-  text-align: left;
+  text-align: center;
+  padding: 20px;
 }
 .search {
   margin-top: 40px;
@@ -126,7 +128,7 @@ footer {
   position: relative;
   top: 18px;
   bottom: 20px;
-  left: 15px;
+  left: 250px;
   right: 0;
 }
 
