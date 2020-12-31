@@ -94,7 +94,7 @@ footer {
   display: grid;
 }
 
-.currentTemp {
+#currentTemp {
   font-size: 22px;
   position: left;
 }

@@ -42,20 +42,32 @@ function showTemperature(response) {
   let currentCity = response.data.name;
   let citySearch = document.querySelector("#citySearch");
   citySearch.innerHTML = `${currentCity}`;
-  let actualTemp = Math.round(response.data.main.temp);
+  let actualTemp = Math.round(celsiusTemp);
   let currentTemp = document.querySelector(".currentTemp");
-  currentTemp.innerHTML = `${actualTemp}° C`;
+  currentTemp.innerHTML = `${actualTemp}`;
 
-  console.log(actualTemp);
-  console.log(currentCity);
+
+  celsiusTemp = response.data.main.temp;
+  
 }
 
 function showFahrenheit(event){
   event.preventDefault();
-  let showFahrenheitTemp = (12 * 9) / 5 + 32;
+  let showFahrenheitTemp = Math.round(celsiusTemp * 9 / 5) + 32;
   let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = showFahrenheitTemp;
 }
+
+function showCelsius(event){
+  event.preventDefault();
+  let currentTemp = document.querySelector(".currentTemp");
+  currentTemp.innerHTML = celsiusTemp;
+}
+
+let celsiusTemp = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
