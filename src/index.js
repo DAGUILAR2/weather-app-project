@@ -15,7 +15,7 @@ function searchCity(city) {
  
   axios.get(apiUrl).then(showTemperature);
 
-  document.querySelector(".precipitation").innterHTML=response.data.main.humidity;
+  document.querySelector("#precipitation").innterHTML = response.data.main.humidity;
 
   axios.get(apiUrl).then(showDescription);
   
@@ -26,10 +26,7 @@ function search(event) {
   let searchInput = document.querySelector("#search-text-input");
   searchCity(searchInput.value);}
 
-function search(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  searchCity(searchInput.value);}
+
 
 function searchPosition(position) {
   let lat = position.coords.latitude;
@@ -83,6 +80,7 @@ function showCelsius(event){
 
 let celsiusTemp = null;
 
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
@@ -92,5 +90,4 @@ celsiusLink.addEventListener("click", showCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 
-search("Chicago");
-
+searchCity("Chicago");
