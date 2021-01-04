@@ -24,6 +24,7 @@ function searchCity(city) {
   let apiKey = "2f78f09b7517f3aa9c777434463ca478";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showRain);
 }
 
 function searchPosition(position) {
@@ -45,10 +46,16 @@ function showTemperature(response) {
   let actualTemp = Math.round(celsiusTemp);
   let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = `${actualTemp}`;
+  
 
 
   celsiusTemp = response.data.main.temp;
   
+}
+
+function showRain(response){
+  let currentPrecipitation = document.querySelector(".precipitation");
+  currentPrecipitation.innerHTML = `${currentPrecipitation}`;
 }
 
 function showFahrenheit(event){
@@ -71,5 +78,9 @@ celsiusLink.addEventListener("click", showCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let precipPercent = null; 
+let precipitation = document.querySelector(".precipitation");
+console.log(precipitation);
 
 navigator.geolocation.getCurrentPosition(searchPosition);

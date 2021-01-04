@@ -90,14 +90,18 @@ footer {
   text-align: center;
 }
 
-.container {
-  display: grid;
-}
-
 #currentTemp {
   display: block;
   font-size: 22px;
   position: relative;
+}
+
+.container {
+  border: solid 1px black;
+  border-radius: 3px;
+  display: grid;
+  margin-top: 15px;
+  padding: 15px;
 }
 
 .conditions {
@@ -106,37 +110,17 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+.precipitation,
+.wind {
+  padding: 20px;
+  position: relative;
+}
+
 .search {
   margin-top: 40px;
 }
 
 .search-form {
   grid-area: auto;
-}
-
-.fa-bolt {
-  display: block;
-  position: relative;
-  top: 18px;
-  bottom: 0;
-  left: 0;
-  right: 40px;
-}
-
-.fa-cloud-sun {
-  display: block;
-  position: relative;
-  top: 18px;
-  bottom: 20px;
-  left: 250px;
-  right: 0;
-}
-
-.fa-clouds-showers-heavy {
-  display: block;
-  position: relative;
-  top: 18px;
-  bottom: 0;
-  left: 15px;
-  right: 0;
 }
