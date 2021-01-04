@@ -47,6 +47,8 @@ h1 {
   bottom: 0;
   left: 0;
   right: 50px;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -111,8 +113,8 @@ footer {
   padding: 20px;
 }
 
-.precipitation,
-.wind {
+#precipitation,
+#wind {
   padding: 20px;
   position: relative;
 }

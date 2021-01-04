@@ -6,12 +6,12 @@ let currentDay = days[now.getDay()];
 let currentHour = now.getHours();
 let currentMinutes = now.getMinutes();
 
+
+
 console.log(now.getDate());
 console.log(now.getHours());
 console.log(currentDay);
 console.log(now.getMinutes());
-
-today.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 
 function search(event) {
   event.preventDefault();
@@ -23,8 +23,11 @@ function searchCity(city) {
   let units = "metric";
   let apiKey = "2f78f09b7517f3aa9c777434463ca478";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
-  axios.get(apiUrl).then(showRain);
+  axios.get(apiUrl).then(showDescription);
+  document.querySelector(".precipitation").innterHTML=response.data.main.humidity; 
+  
 }
 
 function searchPosition(position) {
@@ -40,38 +43,32 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemperature(response) {
+  console.log(response.data);
   let currentCity = response.data.name;
   let citySearch = document.querySelector("#citySearch");
-  citySearch.innerHTML = `${currentCity}`;
+  let descriptionElement = document.querySelector(".today");
   let actualTemp = Math.round(celsiusTemp);
   let currentTemp = document.querySelector(".currentTemp");
+  let precipitationElement = document.querySelector("#precipitation");
+  let windElement = document.querySelector("#wind");
+  citySearch.innerHTML = `${currentCity}`;
   currentTemp.innerHTML = `${actualTemp}`;
-  
-
-
   celsiusTemp = response.data.main.temp;
-  
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  precipitationElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.wind.speed;
 }
 
-function showRain(response){
-  let currentPrecipitation = document.querySelector(".precipitation");
-  currentPrecipitation.innerHTML = `${currentPrecipitation}`;
-}
-
-function showFahrenheit(event){
+ function showFahrenheit(event){
   event.preventDefault();
   let showFahrenheitTemp = Math.round(celsiusTemp * 9 / 5) + 32;
   let currentTemp = document.querySelector(".currentTemp");
-  currentTemp.innerHTML = showFahrenheitTemp;
-}
+  currentTemp.innerHTML = showFahrenheitTemp;}
 
 function showCelsius(event){
   event.preventDefault();
   let currentTemp = document.querySelector(".currentTemp");
-  currentTemp.innerHTML = celsiusTemp;
-}
-
-let celsiusTemp = null;
+  currentTemp.innerHTML = celsiusTemp;}
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
@@ -79,8 +76,7 @@ celsiusLink.addEventListener("click", showCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 
-let precipPercent = null; 
-let precipitation = document.querySelector(".precipitation");
-console.log(precipitation);
+celsiusTemp = null;
+
 
 navigator.geolocation.getCurrentPosition(searchPosition);
