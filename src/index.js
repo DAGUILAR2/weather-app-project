@@ -44,19 +44,21 @@ form.addEventListener("submit", search);
 
 function showTemperature(response) {
   console.log(response.data);
-  let currentCity = response.data.name;
+  
   let citySearch = document.querySelector("#citySearch");
   let descriptionElement = document.querySelector(".today");
-  let actualTemp = Math.round(celsiusTemp);
-  let currentTemp = document.querySelector(".currentTemp");
   let precipitationElement = document.querySelector("#precipitation");
   let windElement = document.querySelector("#wind");
-  citySearch.innerHTML = `${currentCity}`;
-  currentTemp.innerHTML = `${actualTemp}`;
-  celsiusTemp = response.data.main.temp;
+  let currentTemp = document.querySelector(".currentTemp");
+
+  currentTemp.innerHTML = response.data.main.temp;
+  citySearch.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   precipitationElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  
+  
+  
 }
 
  function showFahrenheit(event){
