@@ -98,6 +98,12 @@ footer {
   position: relative;
 }
 
+#precipitation,
+#wind {
+  padding: 20px;
+  position: relative;
+}
+
 .container {
   border: solid 1px black;
   border-radius: 3px;
@@ -111,12 +117,6 @@ footer {
   font-size: 20px;
   text-align: center;
   padding: 20px;
-}
-
-#precipitation,
-#wind {
-  padding: 20px;
-  position: relative;
 }
 
 .search {
