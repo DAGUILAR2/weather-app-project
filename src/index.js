@@ -15,7 +15,6 @@ function searchCity(city) {
  
   axios.get(apiUrl).then(showTemperature);
 
-  document.querySelector("#precipitation").innterHTML = response.data.main.humidity;
 
   axios.get(apiUrl).then(showDescription);
   
@@ -49,8 +48,7 @@ function showTemperature(response) {
   let windElement = document.querySelector("#wind");
   let currentTemp = document.querySelector(".currentTemp");
   let iconElement = document.querySelector("#icon");
-  let celsiusElement = document.querySelector("#celsius-link");
-  let fahrenheitElement = document.querySelector("#fahrenheit-link");
+ 
 
   
 
@@ -59,6 +57,8 @@ function showTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   precipitationElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  document.querySelector("#precipitation").innterHTML = response.data.main.humidity;
+  
   iconElement.setAttribute("src" , `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   iconElement.setAttribute("alt" , response.data.weather[0].description);
@@ -66,12 +66,11 @@ function showTemperature(response) {
 
  function showFahrenheit(event){
   event.preventDefault();
-  let currentTemp = document.querySelector(".currentTemp");
 
   celsiusTemp.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let showFahrenheitTemp = Math.round(celsiusTemp * 9 / 5) + 32;
-  fahrenheitElement.innerHTML = showFahrenheitTemp;}
+ }
 
 function showCelsius(event){
   event.preventDefault();
