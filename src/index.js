@@ -49,6 +49,8 @@ function showTemperature(response) {
   let windElement = document.querySelector("#wind");
   let currentTemp = document.querySelector(".currentTemp");
   let iconElement = document.querySelector("#icon");
+  let celsiusElement = document.querySelector("#celsius-link");
+  let fahrenheitElement = document.querySelector("#fahrenheit-link");
 
   
 
@@ -64,12 +66,12 @@ function showTemperature(response) {
 
  function showFahrenheit(event){
   event.preventDefault();
-  let currentTemp = documefnt.querySelector(".currentTemp");
+  let currentTemp = document.querySelector(".currentTemp");
 
   celsiusTemp.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let showFahrenheitTemp = Math.round(celsiusTemp * 9 / 5) + 32;
-  currentTemp.innerHTML = showFahrenheitTemp;}
+  fahrenheitElement.innerHTML = showFahrenheitTemp;}
 
 function showCelsius(event){
   event.preventDefault();
